@@ -36,15 +36,23 @@ body {
  position: relative;
   clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-.logo-box{
+.header__logo-box{
   position: absolute;
   top: 40px;
   left: 40px;
 }
 
-.logo{
+.header__logo{
   height: 3.5rem;
 }
+.header__text-box{
+  position: absolute;
+ top: 40%;   /* related to the parent element */
+  left: 50%;  /* related to the parent element */
+  transform: translate(-50%, -50%);  /* related to the element itself (center)*/
+  text-align: center;
+}
+
 .heading-primary{
   color: #fff;
   text-transform: uppercase;
@@ -52,7 +60,7 @@ body {
   margin-bottom: 6rem;
 
 }
-.heading-primary-main{
+.heading-primary--main{
   display: block;
   font-size: 6rem;
   font-weight: 700;
@@ -65,20 +73,13 @@ body {
     animation-delay: 3s; */
 
 }
-.heading-primary-main-sub{
+.heading-primary-main--sub{
   display: block;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing:1.75rem;
   animation: moveInRight;
   animation-duration: 5s;
-}
-.text-box{
-  position: absolute;
- top: 40%;   /* related to the parent element */
-  left: 50%;  /* related to the parent element */
-  transform: translate(-50%, -50%);  /* related to the element itself (center)*/
-  text-align: center;
 }
 
 @keyframes moveInLeft {
@@ -144,7 +145,7 @@ body {
     transform: translateY(-.1rem);
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.2)
   }
-.btn-white{
+.btn--white{
   background-color: #fff;
   color: #777;
 }
@@ -162,7 +163,7 @@ body {
   transition: all .5s;
 
 }
-.btn-white::after{
+.btn--white::after{
   background-color: #fff;
 }
 /* escale increase the element */
@@ -171,7 +172,7 @@ body {
   opacity: 0;
 
 }
-.btn-animated{
+.btn--animated{
     animation: moveInBottom .5s ease-in .75s;
     animation-fill-mode: backwards;
 }
