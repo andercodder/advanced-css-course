@@ -13,6 +13,7 @@
                 top: 0;
                 left: 0;
                 width: 100%;
+                -webkit-backface-visibility: hidden;
                 backface-visibility: hidden;
                 border-radius: 3px;
                 overflow: hidden;
@@ -82,6 +83,7 @@
                 top: 12rem;
                 right: 2rem;
                 width: 75%;
+                z-index: 1;
         }
 
         &__heading-span {
@@ -148,9 +150,10 @@
                 font-weight: 100;
         }
         // Card responsive
-        @include respond(tab-port) {
+        // @include respond(tab-port) {
 
                         //FUNCIONALITY
+         @media only screen and (max-width: 56.25em), only screen and (hover:none) {
                         height: auto;
                         border-radius: 3px;
                         background-color: $color-white;
